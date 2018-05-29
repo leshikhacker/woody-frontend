@@ -19,6 +19,12 @@
     "browser-sync": "*",
     "gulp": "*",
     "gulp-imagemin": "*",
-    "gulp-svg-sprites": "*"
+    "gulp-svg-sprites": "*",
+    "autoprefixer": "*",
+    "css-mqpacker": "*",
+    "gulp-rename": "*",
+    "gulp-postcss": "*",
+    "postcss-import": "*",
+    "precss": "*"
   }
 }

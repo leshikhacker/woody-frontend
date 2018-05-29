@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/jquery.bxslider.css" />
+    <link rel="stylesheet" href="images/css/sprite.css" />
     <link rel="stylesheet" href="css/main.css" />
 
     <title>Woody Works</title>
@@ -12,56 +14,175 @@
   <body>
     <header class="site-header">
 			<div class="site-logo icon logo"></div>
-			<div class="site-header__section">
-				<nav class="main-navigation">
-					<button class="menu-toggle">Главное меню</button>
+			<nav class="main-navigation">
+				<button class="js-menu-toggle menu-toggle" data-toggle-class=".js-main-menu">Главное меню</button>
+				<div class="js-main-menu main-menu hidden">
 					<ul>
 						<li><a href="#doors" class="js-slide-to-block">Двери</a></li>
 						<li><a href="#furniture" class="js-slide-to-block">Мебель</a></li>
 						<li><a href="#facades" class="js-slide-to-block">Фасад и декор</a></li>
 						<li><a href="#contacts" class="js-slide-to-block">Контакты</a></li>
 					</ul>
-				</nav>
-				<div class="site-header__contacts">
-					<a class="site-site-header__contacts-phone" href="tel:+38(068)300-44-03">+38 (068) 300-44-03,</a>
-					<a class="site-site-header__contacts-phone" href="tel:+38(066)295-90-12">+38 (066) 295-90-12</a>
+					<div class="mobile-contacts">
+						<a class="site-header__contacts-phone" href="tel:+38(068)300-44-03">+38 (068) 300-44-03,</a>
+						<a class="site-header__contacts-phone" href="tel:+38(066)295-90-12">+38 (066) 295-90-12</a>
+						<a href="#request" class="js-slide-to-block button request-button">Оставить заявку</a>
+					</div>
 				</div>
-				<div class="site-header__button">
-					<a href="#request" class="js-slide-to-block button request-button">Оставить заявку</a>
-				</div>
+			</nav>
+			<div class="site-header__contacts">
+				<a class="site-header__contacts-phone" href="tel:+38(068)300-44-03">+38 (068) 300-44-03,</a>
+				<a class="site-header__contacts-phone" href="tel:+38(066)295-90-12">+38 (066) 295-90-12</a>
+			</div>
+			<div class="site-header__button">
+				<a href="#request" class="js-slide-to-block button request-button">Оставить заявку</a>
 			</div>
     </header>
 
 		<div class="tiles tiles-first-line">
 			<div class="container">
-				<div class="tile tile-doors-1 tile-middle tile-content tile-orange">
-					<h2 class="tile__title">Двери</h2>
+				<div class="tile tile-doors-1 tile-middle tile-orange">
+          <div class="tile__content">
+					  <h2 class="tile__title">Двери</h2>
+          </div>
 				</div>
-				<div class="tile tile-doors-2 tile-small">
+				<div class="tile tile-doors-2 tile-small tile-slider-pager-vertical-top-left">
 					<img src="images/first-doors-slider-1.jpg" alt="">
 				</div>
-				<div class="tile tile-doors-3 tile-middle tile-content tile-green">
-					<p>Межкомнатные двери из натурального дерева – красивый, надежный и долговечный элемент интерьера вашего жилья. Качественные, отлично выглядящие двери из дерева станут прекрасным дополнением к обстановке комнаты, выполненной практически в любом стиле – от роскошного барокко до современных хай-тек лофтов с дверями купе.</p>
+				<div class="tile tile-doors-3 tile-middle tile-green">
+					<div class="tile__content">
+						<p>Межкомнатные двери из натурального дерева – красивый, надежный и долговечный элемент интерьера вашего жилья. Качественные, отлично выглядящие двери из дерева станут прекрасным дополнением к обстановке комнаты, выполненной практически в любом стиле – от роскошного барокко до современных хай-тек лофтов с дверями купе.</p>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="tiles tiles-second-line">
+		<div class="tiles">
 			<div class="container">
-				<div class="tile tile-doors-4 tile-middle">
+				<div class="tile tile-doors-4 tile-middle tile-slider-pager-horizontal-bottom-left">
 					<img src="images/second-doors-slider-1.jpg" alt="">
 				</div>
-				<div class="tile tile-doors-5 tile-small tile-content tile-brown">
-					<p>Межкомнатные двери под заказ изготавливаются с учетом ваших пожеланий, вкусов и общего дизайна интерьера. Сейчас, когда в Киеве купить можно практически любые двери – именно индивидуальность и стиль двери из массива наиболее востребована.</p>
-					<a href="#request" class="js-slide-to-block button button-inverse">Оставить заявку</a>
+				<div class="tile tile-doors-5 tile-small tile-brown">
+					<div class="tile__content">
+						<p>Межкомнатные двери под заказ изготавливаются с учетом ваших пожеланий, вкусов и общего дизайна интерьера. Сейчас, когда в Киеве купить можно практически любые двери – именно индивидуальность и стиль двери из массива наиболее востребована.</p>
+						<a href="#request" class="js-slide-to-block button button-inverse">Оставить заявку</a>
+					</div>
 				</div>
-				<div class="tile tile-doors-6 tile-middle">
+				<div class="tile tile-doors-6 tile-middle tile-slider-pager-horizontal-top-left">
 					<img src="images/third-doors-slider-1.jpg" alt="">
+					<a href="#furniture" class="navigation-link">Мебель</a>
 				</div>
 			</div>
 		</div>
 
+		<div class="tiles">
+			<div class="container">
+				<div class="tile tile-big tile-wrap">
+					<div class="tile">
+						<div class="tile tile-furniture-1 -tile-middle tile-light-blue">
+							<div class="tile__content">
+								<h2 class="tile__title">Мебель</h2>
+							</div>
+						</div>
+						<div class="tile tile-furniture-2 tile-small tile-light-blue">
+							<div class="tile__content">
+								<p>При создании интерьера своего дома или квартиры, каждый сталкивается с вопросом: где купить стол на кухню и какого типа? Множество вариантов для выбора предлагает рынок мебели. Но и большое количество факторов, таких как площадь кухни, цветовая гамма, мобильность, могут ограничить ваш выбор.</p>
+							</div>
+						</div>
+					</div>
+					<div class="tile">
+						<div class="tile tile-furniture-3 -tile-middle">
+							<img src="images/first-furniture-slider-1.jpg" />
+						</div>
+						<div class="tile tile-furniture-4 tile-small tile-orange">
+							<div class="tile__content">
+								<p>Использование хороших материалов при производстве мебели ещё не говорит о том, что сама мебель получится качественной. Следует обращать внимание на отсутствие возможных подтеков лака, отсутствие сколов и трещин, шероховатости поверхности.</p>
+								<a href="#request" class="js-slide-to-block button button-inverse">Оставить заявку</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tile tile-furniture-5 tile-middle tile-slider-pager-horizontal-bottom-left">
+					<img src="images/second-furniture-slider-1.jpg" />
+				</div>
+			</div>
+		</div>
 
+		<div class="tiles">
+			<div class="container">
+				<div class="tile tile-facades-1 tile-middle tile-turquoise">
+          <div class="tile__content">
+					  <h2 class="tile__title">
+							Фасады
+							<span>и декор</span>
+						</h2>
+          </div>
+				</div>
+				<div class="tile tile-facades-2 tile-small tile-slider-pager-vertical-top-left">
+					<img src="images/first-facades-slider-1.jpg" alt="">
+				</div>
+				<div class="tile tile-facades-3 tile-middle tile-light-brown">
+					<div class="tile__content">
+						<p>Мебельные фасады из массива – это прекрасное решение, как для жилого помещения, так и для офиса. Они привносят некую теплую нотку в холодную рабочую обстановку, или придают благородства обычной домашней комнате.</p>
+						<p>Мебель из натурального дерева никогда не выйдет из моды и всегда будет признаком хорошего вкуса. Такой интерьер – это классика дизайна, нестареющая и прекрасная.</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<div class="tiles">
+			<div class="container">
+				<div class="tile tile-facades-4 tile-middle tile-slider-pager-horizontal-bottom-left">
+					<img src="images/second-facades-slider-1.jpg" alt="">
+				</div>
+				<div class="tile tile-facades-5 tile-small tile-blue">
+					<div class="tile__content">
+						<p>Декоративные резные элементы из дерева в дополнение к фасадам подчеркнут индивидуальность и внесут красоту и престиж в создании уникального дизайна Вашей мебели.</p>
+						<a href="#request" class="js-slide-to-block button button-inverse">Оставить заявку</a>
+					</div>
+				</div>
+				<div class="tile tile-facades-6 tile-middle tile-slider-pager-horizontal-top-left">
+					<img src="images/third-facades-slider-1.jpg" alt="">
+				</div>
+			</div>
+		</div>
+
+		<footer class="tiles">
+			<div class="container">
+				<div class="tile tile-footer-1 tile-middle tile-orange">
+					<div class="tile__content">
+						<h2 class="tile__small-title">Напишите нам</h2>
+						<form action="" class="contact-form" method="post">
+							<div class="contact-form__row">
+								<label for="name">Ваше Имя</label>
+								<input type="text" name="name" id="name" value="">
+							</div>
+							<div class="contact-form__row">
+								<label for="phone">Телефон</label>
+								<input type="tel" name="phone" id="phone" value="">
+							</div>
+							<div class="contact-form__row">
+								<label for="email">E-mail</label>
+								<input type="email" name="email" id="email" value="">
+							</div>
+							<div class="contact-form__row">
+								<label for="message">Сообщение</label>
+								<textarea name="message" id="message" value=""></textarea>
+							</div>
+							<button class="button button-inverse">Оставить заявку</button>
+						</form>
+					</div>
+				</div>
+				<div class="tile tile-big">
+					<div id="map"></div>
+				</div>
+			</div>
+		</footer>
+
+  	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+  	<script type="text/javascript" src="js/main.js"></script>
+		<!-- key=AIzaSyA7yL7iKe76LB9W7NtNusyz3yeEnhAbOos -->
+		<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
   </body>
 </html>
