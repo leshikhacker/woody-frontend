@@ -71,6 +71,11 @@ a:hover {
 	margin: 0 auto;
 }
 
+.address-list dt {
+	font-weight: bold;
+	margin-top: 20px;
+}
+
 .site-header {
 	background-color: #fff;
 	padding-left: 20px;
@@ -218,6 +223,10 @@ a:hover {
   width: 100%;
 }
 
+.tile .address-list {
+	margin-top: 40px;
+}
+
 .tile-orange {
 	background-color: #ffb752;
 }
@@ -270,6 +279,7 @@ a:hover {
 .tile__small-title {
 	font-family: Bebas Neue, sans-serif;
 	font-size: 60px;
+	line-height: 1;
 }
 
 .tile-middle {
@@ -348,17 +358,30 @@ a:hover {
 	position: absolute;
 	background-color: #ff5252;
 	background-image: url(../images/arrow.svg);
-	background-size: 11px 19px;
+	background-size: 19px 11px;
 	color: #463636;
 	font-size: 14px;
 	-webkit-transform: rotate(-90deg);
 	        transform: rotate(-90deg);
 	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left: 60px;
-	padding-right: 30px;
-  bottom: 50px;
-	left: 0;
+  padding-bottom: 20px;
+  padding-left: 60px;
+  padding-right: 30px;
+	bottom: 50px;
+  letter-spacing: 6px;
+}
+
+.navigation-link-right {
+	right: -50px;
+}
+
+.navigation-link-top {
+	padding-right: 60px;
+	padding-left: 30px;
+	background-repeat: no-repeat;
+	background-image: url(../images/arrow-right.png);
+	background-position-y: 50%;
+  background-position-x: calc(100% - 20px);
 }
 
 .tile-doors-1 {
@@ -527,7 +550,7 @@ a:hover {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding-top: 70px;
-  padding-bottom: 140px;
+  padding-bottom: 120px;
 }
 
 .tile-footer-1 .tile__content {
@@ -578,6 +601,20 @@ a:hover {
   margin-top: 45px;
 }
 
+.tile-contacts {
+  position: absolute;
+  z-index: 1;
+  width: 400px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 /* depends on tiles/tiles.pcss */
 
 @media screen and (max-width: 700px) {
@@ -588,6 +625,9 @@ a:hover {
 		-ms-flex-preferred-size: 100%;
 		    flex-basis: 100%;
 	}
+  .tile-footer-1 .tile__content {
+    padding-right: 40px;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -710,6 +750,24 @@ a:hover {
 	.tile-facades-2 {
 		display: none;
 	}
+  .tile-map {
+    -ms-flex-preferred-size: 100% !important;
+        flex-basis: 100% !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .tile-contacts {
+    position: relative;
+  }
+  #map {
+    height: 400px;
+  }
+  .tile-footer-1 .tile__content {
+    padding-right: 104px;
+  }
 }
 
 @media screen and (max-width: 475px) {
@@ -732,6 +790,14 @@ a:hover {
 	.tile {
 		/* min-height: 100vh; */
 	}
+  .tile-footer-1 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .tile-footer-1 .tile__content {
+    padding: 20px;
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -754,6 +820,15 @@ a:hover {
 	.tile-facades-6 {
 		display: none;
 	}
+  .tile-contacts {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+  }
+  .tile-footer-1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 @media screen and (min-width: 701px) and (max-width: 1023px) {
@@ -773,6 +848,10 @@ a:hover {
 		-ms-flex-preferred-size: 100%;
 		    flex-basis: 100%;
 	}
+  .tile-map {
+    -ms-flex-preferred-size: 39% !important;
+        flex-basis: 39% !important;
+  }
 }
 
 @media screen and (min-width: 641px) and (max-width: 700px) {
@@ -788,6 +867,10 @@ a:hover {
 		-ms-flex-preferred-size: 50%;
 		    flex-basis: 50%;
 	}
+  .tile-map {
+    -ms-flex-preferred-size: 50% !important;
+        flex-basis: 50% !important;
+  }
 }
 
 @media screen and (min-width: 1280px) {

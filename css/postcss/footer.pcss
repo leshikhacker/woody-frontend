@@ -6,7 +6,7 @@
 .tile-footer-1 {
   justify-content: flex-end;
   padding-top: 70px;
-  padding-bottom: 140px;
+  padding-bottom: 120px;
 }
 .tile-footer-1 .tile__content {
   padding-right: 105px;
@@ -47,4 +47,65 @@
 }
 .contact-form .button {
   margin-top: 45px;
+}
+
+.tile-contacts {
+  position: absolute;
+  z-index: 1;
+  width: 400px;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 701px) and (max-width: 1023px) {
+  .tile-map {
+    flex-basis: 39% !important;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .tile-contacts {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+  }
+  .tile-footer-1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 700px) {
+  .tile-map {
+    flex-basis: 50% !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .tile-footer-1 .tile__content {
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .tile-map {
+    flex-basis: 100% !important;
+    flex-wrap: wrap;
+    order: -1;
+  }
+  .tile-contacts {
+    position: relative;
+  }
+  #map {
+    height: 400px;
+  }
+  .tile-footer-1 .tile__content {
+    padding-right: 104px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .tile-footer-1 {
+    justify-content: center;
+  }
+  .tile-footer-1 .tile__content {
+    padding: 20px;
+  }
 }

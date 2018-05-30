@@ -13,6 +13,9 @@
 	height: 100%;
   width: 100%;
 }
+.tile .address-list {
+	margin-top: 40px;
+}
 .tile-orange {
 	background-color: #ffb752;
 }
@@ -54,6 +57,7 @@
 .tile__small-title {
 	font-family: Bebas Neue, sans-serif;
 	font-size: 60px;
+	line-height: 1;
 }
 
 .tile-middle {
@@ -114,16 +118,27 @@
 	position: absolute;
 	background-color: #ff5252;
 	background-image: url(../images/arrow.svg);
-	background-size: 11px 19px;
+	background-size: 19px 11px;
 	color: #463636;
 	font-size: 14px;
 	transform: rotate(-90deg);
 	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left: 60px;
-	padding-right: 30px;
-  bottom: 50px;
-	left: 0;
+  padding-bottom: 20px;
+  padding-left: 60px;
+  padding-right: 30px;
+	bottom: 50px;
+  letter-spacing: 6px;
+}
+.navigation-link-right {
+	right: -50px;
+}
+.navigation-link-top {
+	padding-right: 60px;
+	padding-left: 30px;
+	background-repeat: no-repeat;
+	background-image: url(../images/arrow-right.png);
+	background-position-y: 50%;
+  background-position-x: calc(100% - 20px);
 }
 
 @media screen and (max-width: 1023px) {

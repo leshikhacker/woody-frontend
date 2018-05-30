@@ -12,7 +12,7 @@
     <title>Woody Works</title>
   </head>
   <body>
-    <header class="site-header">
+    <header id="header" class="site-header">
 			<div class="site-logo icon logo"></div>
 			<nav class="main-navigation">
 				<button class="js-menu-toggle menu-toggle" data-toggle-class=".js-main-menu">Главное меню</button>
@@ -26,7 +26,7 @@
 					<div class="mobile-contacts">
 						<a class="site-header__contacts-phone" href="tel:+38(068)300-44-03">+38 (068) 300-44-03,</a>
 						<a class="site-header__contacts-phone" href="tel:+38(066)295-90-12">+38 (066) 295-90-12</a>
-						<a href="#request" class="js-slide-to-block button request-button">Оставить заявку</a>
+						<a href="#request-form" class="js-slide-to-block button request-button">Оставить заявку</a>
 					</div>
 				</div>
 			</nav>
@@ -35,11 +35,11 @@
 				<a class="site-header__contacts-phone" href="tel:+38(066)295-90-12">+38 (066) 295-90-12</a>
 			</div>
 			<div class="site-header__button">
-				<a href="#request" class="js-slide-to-block button request-button">Оставить заявку</a>
+				<a href="#request-form" class="js-slide-to-block button request-button">Оставить заявку</a>
 			</div>
     </header>
 
-		<div class="tiles tiles-first-line">
+		<div id="doors" class="tiles tiles-first-line">
 			<div class="container">
 				<div class="tile tile-doors-1 tile-middle tile-orange">
           <div class="tile__content">
@@ -65,12 +65,11 @@
 				<div class="tile tile-doors-5 tile-small tile-brown">
 					<div class="tile__content">
 						<p>Межкомнатные двери под заказ изготавливаются с учетом ваших пожеланий, вкусов и общего дизайна интерьера. Сейчас, когда в Киеве купить можно практически любые двери – именно индивидуальность и стиль двери из массива наиболее востребована.</p>
-						<a href="#request" class="js-slide-to-block button button-inverse">Оставить заявку</a>
+						<a href="#request-form" class="js-slide-to-block button button-inverse">Оставить заявку</a>
 					</div>
 				</div>
 				<div class="tile tile-doors-6 tile-middle tile-slider-pager-horizontal-top-left">
 					<img src="images/third-doors-slider-1.jpg" alt="">
-					<a href="#furniture" class="navigation-link">Мебель</a>
 				</div>
 			</div>
 		</div>
@@ -97,7 +96,7 @@
 						<div class="tile tile-furniture-4 tile-small tile-orange">
 							<div class="tile__content">
 								<p>Использование хороших материалов при производстве мебели ещё не говорит о том, что сама мебель получится качественной. Следует обращать внимание на отсутствие возможных подтеков лака, отсутствие сколов и трещин, шероховатости поверхности.</p>
-								<a href="#request" class="js-slide-to-block button button-inverse">Оставить заявку</a>
+								<a href="#request-form" class="js-slide-to-block button button-inverse">Оставить заявку</a>
 							</div>
 						</div>
 					</div>
@@ -138,7 +137,7 @@
 				<div class="tile tile-facades-5 tile-small tile-blue">
 					<div class="tile__content">
 						<p>Декоративные резные элементы из дерева в дополнение к фасадам подчеркнут индивидуальность и внесут красоту и престиж в создании уникального дизайна Вашей мебели.</p>
-						<a href="#request" class="js-slide-to-block button button-inverse">Оставить заявку</a>
+						<a href="#request-form" class="js-slide-to-block button button-inverse">Оставить заявку</a>
 					</div>
 				</div>
 				<div class="tile tile-facades-6 tile-middle tile-slider-pager-horizontal-top-left">
@@ -149,7 +148,8 @@
 
 		<footer class="tiles">
 			<div class="container">
-				<div class="tile tile-footer-1 tile-middle tile-orange">
+				<div id="request-form" class="tile tile-footer-1 tile-middle tile-orange">
+					<a href="#header" class="js-slide-to-block navigation-link navigation-link-right navigation-link-top">Вверх</a>
 					<div class="tile__content">
 						<h2 class="tile__small-title">Напишите нам</h2>
 						<form action="" class="contact-form" method="post">
@@ -172,8 +172,24 @@
 							<button class="button button-inverse">Оставить заявку</button>
 						</form>
 					</div>
+
 				</div>
-				<div class="tile tile-big">
+				<div class="tile tile-big tile-map">
+					<div class="tile tile-turquoise tile-contacts">
+						<div class="tile__content">
+							<h2 class="tile__small-title">Контакты</h2>
+							<dl class="address-list">
+							  <dt>Адрес:</dt>
+							  <dd>г.Киев, Приколейная 19</dd>
+							  <dt>Телефоны: </dt>
+							  <dd>+3 8(068) 300-44-03;</dd>
+							  <dd>+3 8 (066) 295-90-12</dd>
+								<dt>Email:</dt>
+								<dd>sale@woody.com.ua</dd>
+							</dl>
+						</div>
+					</div>
+
 					<div id="map"></div>
 				</div>
 			</div>

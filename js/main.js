@@ -4,11 +4,15 @@ function initMap() {
   var coords = {lat: 50.433384, lng: 30.659018};
   // The map, centered at Uluru
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 14, center: coords});
+      document.getElementById('map'), {zoom: 13, center: coords});
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({
     position: coords,
-    label: 'вулиця Приколійна, 19',
+    labelOrigin: new google.maps.Point(40,33),
+    label: {
+      text: 'вулиця Приколійна, 19',
+      color: '#c02618'
+    },
     map: map
   });
 }
@@ -23,4 +27,12 @@ $(document).ready(function() {
   //   touchEnabled: true,
   //   preventDefaultSwipeY: true
   // });
+
+  $('.js-slide-to-block').on('click', function(e) {
+    e.preventDefault();
+    var elementId = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(elementId).offset().top
+    }, 1000);
+  });
 });
