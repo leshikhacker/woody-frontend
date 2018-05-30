@@ -20,8 +20,6 @@
   src: url('../fonts/BebasNeueLight.otf') format("opentype");
 }
 
-/* @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic'); */
-
 body {
 	font-family: 'Roboto', sans-serif;
 	color: #463636;
@@ -64,6 +62,7 @@ a:hover {
 .button:hover {
 	opacity: 0.8;
 	outline: none;
+	/* box-shadow: -1px 0px 1px 1px #848484; */
 }
 
 .container {
@@ -105,8 +104,16 @@ a:hover {
 .site-logo {
 	width: 210px;
 	height: 110px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	text-align: center;
+
 	background-color: #463636;
-	background-image: url(../images/logo.png);
+	color: #fff;
 	background-repeat: no-repeat;
 	background-size: 131px 53px;
   background-position: 50% calc(50% - 5px);
@@ -115,6 +122,9 @@ a:hover {
 	z-index: 1;
   padding-left: 0;
 	margin-top: 0;
+	font-family: 'Alfa Slab One', cursive;
+	font-size: 30px;
+	text-transform: uppercase;
 }
 
 .main-navigation {
@@ -256,7 +266,7 @@ a:hover {
 }
 
 .tile__content {
-	padding: 20px;
+	padding: 5%;
 }
 
 .tile__content .button {
@@ -266,11 +276,11 @@ a:hover {
 
 .tile__title {
 	font-family: Bebas Neue, sans-serif;
-	font-size: 120px;
+	font-size: 100px;
 }
 
 .tile__title span {
-	font-size: 72px;
+	font-size: 60px;
 	display: block;
   padding-left: 20px;
   margin-top: -30px;
@@ -388,14 +398,17 @@ a:hover {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	-webkit-box-pack: end;
-	    -ms-flex-pack: end;
-	        justify-content: flex-end;
-	padding-right: 5%;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 }
 
 .tile-doors-2 {
 	font-size: 0;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 }
 
 .tile-doors-3 {
@@ -416,6 +429,8 @@ a:hover {
 .tile-doors-4 {
 	overflow: hidden;
 	font-size: 0;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 }
 
 .tile-doors-5 .tile__content {
@@ -441,6 +456,8 @@ a:hover {
 .tile-doors-6 {
 	overflow: hidden;
 	font-size: 0;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 }
 
 /* depends on tiles/tiles.pcss */
@@ -488,10 +505,11 @@ a:hover {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	-webkit-box-pack: end;
-	    -ms-flex-pack: end;
-	        justify-content: flex-end;
-	padding-right: 5%;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 }
 
 .tile-facades-2 {
@@ -502,6 +520,8 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 }
 
 .tile-facades-3 .tile__content {
@@ -546,9 +566,9 @@ a:hover {
 }
 
 .tile-footer-1 {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 70px;
   padding-bottom: 120px;
 }
@@ -790,13 +810,46 @@ a:hover {
 	.tile {
 		/* min-height: 100vh; */
 	}
+	.navigation-link {
+		display: none;
+	}
   .tile-footer-1 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   .tile-footer-1 .tile__content {
-    padding: 20px;
+    padding: 20px !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+	.tile__title {
+		font-size: 120px;
+	}
+	.tile__title span {
+		font-size: 72px;
+	}
+	.tile-doors-1 {
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+	}
+	.tile-doors-1 .tile__content {
+		padding-right: 14%;
+	}
+	.tile-facades-1 {
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+	}
+	.tile-facades-1 .tile-content {
+		padding-right: 14%;
+	}
+  .tile-footer-1 {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -829,6 +882,9 @@ a:hover {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  .tile-footer-1 .tile__content {
+		padding-right: 70px;
+	}
 }
 
 @media screen and (min-width: 701px) and (max-width: 1023px) {

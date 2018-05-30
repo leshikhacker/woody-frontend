@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
-const svgSprite = require("gulp-svg-sprites");
+// const svgSprite = require("gulp-svg-sprites");
 
 var rename = require('gulp-rename');
 var postcss = require('gulp-postcss');
@@ -39,16 +39,16 @@ gulp.task('css', function () {
     .pipe(browserSync.stream());
 });
 
-gulp.task('image', ['sprites'], function () {
+gulp.task('image', function () {
   gulp.src('./fixtures/images/*')
     .pipe(imagemin())
     .pipe(gulp.dest('./images'));
 });
 
-gulp.task('sprites', function () {
-  return gulp.src('fixtures/svg/*.svg')
-    .pipe(svgSprite())
-    .pipe(gulp.dest("images"));
-});
+// gulp.task('sprites', function () {
+//   return gulp.src('fixtures/svg/*.svg')
+//     .pipe(svgSprite())
+//     .pipe(gulp.dest("images"));
+// });
 
 gulp.task('default', ['serve']);

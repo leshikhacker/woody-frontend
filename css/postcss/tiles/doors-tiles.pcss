@@ -1,10 +1,11 @@
 .tile-doors-1 {
 	align-items: center;
-	justify-content: flex-end;
-	padding-right: 5%;
+	justify-content: center;
+	flex-shrink: 0;
 }
 .tile-doors-2 {
 	font-size: 0;
+	flex-shrink: 0;
 }
 .tile-doors-3 {
 
@@ -18,6 +19,7 @@
 .tile-doors-4 {
 	overflow: hidden;
 	font-size: 0;
+	flex-shrink: 0;
 }
 .tile-doors-5 .tile__content {
 	display: flex;
@@ -34,6 +36,7 @@
 .tile-doors-6 {
 	overflow: hidden;
 	font-size: 0;
+	flex-shrink: 0;
 }
 
 @media screen and (min-width: 1280px) {
@@ -41,6 +44,14 @@
 		padding-left: 104px;
 		padding-right: 20px;
 		width: 459px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.tile-doors-1 {
+		justify-content: flex-end;
+	}
+	.tile-doors-1 .tile__content {
+		padding-right: 14%;
 	}
 }
 @media screen and (max-width: 1023px) {

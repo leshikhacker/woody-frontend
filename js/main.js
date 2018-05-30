@@ -22,11 +22,11 @@ $(document).ready(function() {
     $($(this).data('toggle-class')).toggleClass('hidden');
   });
 
-  // $('.js-slider').bxSlider({
-  //   responsive: true,
-  //   touchEnabled: true,
-  //   preventDefaultSwipeY: true
-  // });
+  $('.js-slider').bxSlider({
+    responsive: true,
+    touchEnabled: true,
+    preventDefaultSwipeY: true
+  });
 
   $('.js-slide-to-block').on('click', function(e) {
     e.preventDefault();

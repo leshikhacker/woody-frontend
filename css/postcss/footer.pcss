@@ -4,7 +4,7 @@
 }
 
 .tile-footer-1 {
-  justify-content: flex-end;
+  justify-content: center;
   padding-top: 70px;
   padding-bottom: 120px;
 }
@@ -59,6 +59,11 @@
   justify-content: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .tile-footer-1 {
+    justify-content: flex-end;
+  }
+}
 @media screen and (min-width: 701px) and (max-width: 1023px) {
   .tile-map {
     flex-basis: 39% !important;
@@ -74,6 +79,9 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  .tile-footer-1 .tile__content {
+		padding-right: 70px;
+	}
 }
 @media screen and (min-width: 641px) and (max-width: 700px) {
   .tile-map {
@@ -106,6 +114,6 @@
     justify-content: center;
   }
   .tile-footer-1 .tile__content {
-    padding: 20px;
+    padding: 20px !important;
   }
 }

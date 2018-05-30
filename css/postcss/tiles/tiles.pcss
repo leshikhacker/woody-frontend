@@ -38,7 +38,7 @@
 	background-color: #989fb8;
 }
 .tile__content {
-	padding: 20px;
+	padding: 5%;
 }
 .tile__content .button {
 	width: 100%;
@@ -46,10 +46,10 @@
 }
 .tile__title {
 	font-family: Bebas Neue, sans-serif;
-	font-size: 120px;
+	font-size: 100px;
 }
 .tile__title span {
-	font-size: 72px;
+	font-size: 60px;
 	display: block;
   padding-left: 20px;
   margin-top: -30px;
@@ -140,7 +140,14 @@
 	background-position-y: 50%;
   background-position-x: calc(100% - 20px);
 }
-
+@media screen and (min-width: 1200px) {
+	.tile__title {
+		font-size: 120px;
+	}
+	.tile__title span {
+		font-size: 72px;
+	}
+}
 @media screen and (max-width: 1023px) {
 	.tile img {
 		width: 100%;
@@ -202,5 +209,8 @@
 @media screen and (max-width: 475px) {
 	.tile {
 		/* min-height: 100vh; */
+	}
+	.navigation-link {
+		display: none;
 	}
 }
