@@ -6,13 +6,14 @@
 		<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/jquery.bxslider.css" />
+		<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
     <link rel="stylesheet" href="css/main.css" />
 
     <title>Woody Works</title>
   </head>
   <body>
     <header id="header" class="site-header">
-			<h1 class="site-logo icon logo">Woody Works</h1>
+			<h1 class="site-logo icon logo">Woody<br />Works</h1>
 			<nav class="main-navigation">
 				<button class="js-menu-toggle menu-toggle" data-toggle-class=".js-main-menu">Главное меню</button>
 				<div class="js-main-menu main-menu hidden">
@@ -46,7 +47,13 @@
           </div>
 				</div>
 				<div class="tile tile-doors-2 tile-small tile-slider-pager-vertical-top-left">
-					<img src="images/first-doors-slider-1.jpg" alt="">
+					<!-- <img src="images/first-doors-slider-1.jpg" alt=""> -->
+					<div class="slider js-slider">
+						<div><img src="images/first-doors-slider-1.jpg" alt=""></div>
+						<div><img src="images/first-doors-slider-1.jpg" alt=""></div>
+						<div><img src="images/first-doors-slider-1.jpg" alt=""></div>
+						<div><img src="images/first-doors-slider-1.jpg" alt=""></div>
+					</div>
 				</div>
 				<div class="tile tile-doors-3 tile-middle tile-green">
 					<div class="tile__content">
@@ -58,8 +65,13 @@
 
 		<div class="tiles">
 			<div class="container">
-				<div class="tile tile-doors-4 tile-middle tile-slider-pager-horizontal-bottom-left">
-					<img src="images/second-doors-slider-1.jpg" alt="">
+				<div class="tile tile-doors-4 tile-middle tile-slider-pager-horizontal-bottom-right">
+					<div class="slider js-slider">
+						<div class="slider-image-wrap"><img src="images/second-doors-slider-1.jpg" alt=""></div>
+						<div class="slider-image-wrap"><img src="images/second-doors-slider-1.jpg" alt=""></div>
+						<div class="slider-image-wrap"><img src="images/second-doors-slider-1.jpg" alt=""></div>
+						<div class="slider-image-wrap"><img src="images/second-doors-slider-1.jpg" alt=""></div>
+					</div>
 				</div>
 				<div class="tile tile-doors-5 tile-small tile-brown">
 					<div class="tile__content">
@@ -68,12 +80,18 @@
 					</div>
 				</div>
 				<div class="tile tile-doors-6 tile-middle tile-slider-pager-horizontal-top-left">
-					<img src="images/third-doors-slider-1.jpg" alt="">
+					<a href="#furniture" class="js-slide-to-block navigation-link navigation-link-left">Мебель</a>
+					<div class="slider js-slider">
+						<div class="slider-image-wrap"><img src="images/third-doors-slider-1.jpg" alt=""></div>
+						<div class="slider-image-wrap"><img src="images/third-doors-slider-1.jpg" alt=""></div>
+						<div class="slider-image-wrap"><img src="images/third-doors-slider-1.jpg" alt=""></div>
+						<div class="slider-image-wrap"><img src="images/third-doors-slider-1.jpg" alt=""></div>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="tiles">
+		<div id="furniture" class="tiles">
 			<div class="container">
 				<div class="tile tile-big tile-wrap">
 					<div class="tile">
@@ -89,8 +107,15 @@
 						</div>
 					</div>
 					<div class="tile">
-						<div class="tile tile-furniture-3 -tile-middle">
-							<img src="images/first-furniture-slider-1.jpg" />
+						<div class="tile tile-furniture-3 -tile-middle tile-slider-pager-vertical-top-right">
+							<!-- <img src="images/first-furniture-slider-1.jpg" /> -->
+							<a href="#facades" class="js-slide-to-block navigation-link navigation-link-right">Фасады</a>
+							<div class="slider js-slider">
+								<div class="slider-image-wrap"><img src="images/first-furniture-slider-1.jpg" /></div>
+								<div class="slider-image-wrap"><img src="images/first-furniture-slider-1.jpg" /></div>
+								<div class="slider-image-wrap"><img src="images/first-furniture-slider-1.jpg" /></div>
+								<div class="slider-image-wrap"><img src="images/first-furniture-slider-1.jpg" /></div>
+							</div>
 						</div>
 						<div class="tile tile-furniture-4 tile-small tile-orange">
 							<div class="tile__content">
@@ -100,13 +125,20 @@
 						</div>
 					</div>
 				</div>
+				<!-- tile-slider-pager-horizontal-bottom-left -->
 				<div class="tile tile-furniture-5 tile-middle tile-slider-pager-horizontal-bottom-left">
-					<img src="images/second-furniture-slider-1.jpg" />
+					<!-- <img src="images/second-furniture-slider-1.jpg" /> -->
+					<div class="slider js-slider">
+						<div class="slider-image-wrap"><img src="images/second-furniture-slider-1.jpg" /></div>
+						<div class="slider-image-wrap"><img src="images/second-furniture-slider-1.jpg" /></div>
+						<div class="slider-image-wrap"><img src="images/second-furniture-slider-1.jpg" /></div>
+						<div class="slider-image-wrap"><img src="images/second-furniture-slider-1.jpg" /></div>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="tiles">
+		<div id="facades" class="tiles">
 			<div class="container">
 				<div class="tile tile-facades-1 tile-middle tile-turquoise">
           <div class="tile__content">
@@ -116,8 +148,13 @@
 						</h2>
           </div>
 				</div>
-				<div class="tile tile-facades-2 tile-small tile-slider-pager-vertical-top-left">
-					<img src="images/first-facades-slider-1.jpg" alt="">
+				<div class="tile tile-facades-2 tile-small tile-slider-pager-horizontal-bottom-right">
+					<div class="slider js-slider">
+						<div class="slider-image-wrap"><img src="images/first-facades-slider-1.jpg" alt=""></div>
+						<div class="slider-image-wrap"><img src="images/first-facades-slider-1.jpg" alt=""></div>
+						<div class="slider-image-wrap"><img src="images/first-facades-slider-1.jpg" alt=""></div>
+						<div class="slider-image-wrap"><img src="images/first-facades-slider-1.jpg" alt=""></div>
+					</div>
 				</div>
 				<div class="tile tile-facades-3 tile-middle tile-light-brown">
 					<div class="tile__content">
@@ -130,8 +167,13 @@
 
 		<div class="tiles">
 			<div class="container">
-				<div class="tile tile-facades-4 tile-middle tile-slider-pager-horizontal-bottom-left">
-					<img src="images/second-facades-slider-1.jpg" alt="">
+				<div class="tile tile-facades-4 tile-middle tile-slider-pager-horizontal-bottom-right">
+					<div class="slider js-slider">
+						<div class="slider-image-wrap"><img src="images/second-facades-slider-1.jpg" alt=""></div>
+						<div class="slider-image-wrap"><img src="images/second-facades-slider-1.jpg" alt=""></div>
+						<div class="slider-image-wrap"><img src="images/second-facades-slider-1.jpg" alt=""></div>
+						<div class="slider-image-wrap"><img src="images/second-facades-slider-1.jpg" alt=""></div>
+					</div>
 				</div>
 				<div class="tile tile-facades-5 tile-small tile-blue">
 					<div class="tile__content">
@@ -139,8 +181,14 @@
 						<a href="#request-form" class="js-slide-to-block button button-inverse">Оставить заявку</a>
 					</div>
 				</div>
-				<div class="tile tile-facades-6 tile-middle tile-slider-pager-horizontal-top-left">
-					<img src="images/third-facades-slider-1.jpg" alt="">
+				<div class="tile tile-facades-6 tile-middle tile-slider-pager-vertical-top-left">
+					<a href="#contacts" class="js-slide-to-block navigation-link navigation-link-left">Контакты</a>
+					<div class="slider js-slider">
+						<div class="slider-image-wrap"><img src="images/third-facades-slider-1.jpg" alt=""></div>
+						<div class="slider-image-wrap"><img src="images/third-facades-slider-1.jpg" alt=""></div>
+						<div class="slider-image-wrap"><img src="images/third-facades-slider-1.jpg" alt=""></div>
+						<div class="slider-image-wrap"><img src="images/third-facades-slider-1.jpg" alt=""></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -173,7 +221,7 @@
 					</div>
 
 				</div>
-				<div class="tile tile-big tile-map">
+				<div id="contacts" class="tile tile-big tile-map">
 					<div class="tile tile-turquoise tile-contacts">
 						<div class="tile__content">
 							<h2 class="tile__small-title">Контакты</h2>
@@ -195,9 +243,9 @@
 		</footer>
 
   	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
-  	<script type="text/javascript" src="js/main.js"></script>
 		<!-- key=AIzaSyA7yL7iKe76LB9W7NtNusyz3yeEnhAbOos -->
 		<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+  	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+  	<script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
