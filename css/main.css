@@ -233,8 +233,10 @@ a:hover {
 }
 
 .tile img {
+	-o-object-fit: cover;
+	   object-fit: cover;
 	height: 100%;
-  width: 100%;
+	width: 100%;
 }
 
 .tile .address-list {
@@ -471,6 +473,7 @@ a:hover {
 	font-size: 0;
 	-ms-flex-negative: 0;
 	    flex-shrink: 0;
+	overflow: hidden;
 }
 
 .tile-doors-3 {
@@ -484,8 +487,8 @@ a:hover {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	padding-left: 10%;
-	padding-right: 10%;
+	padding-left: 21%;
+	padding-right: 21%;
 }
 
 .tile-doors-4 {
@@ -510,8 +513,8 @@ a:hover {
       justify-content: space-around;
 	padding-left: 21%;
 	padding-right: 21%;
-	padding-top: 10%;
-	padding-bottom: 10%;
+	padding-top: 15%;
+	padding-bottom: 15%;
 	color: #fff;
 }
 
@@ -531,15 +534,30 @@ a:hover {
 	-webkit-box-pack: end;
 	    -ms-flex-pack: end;
 	        justify-content: flex-end;
-	padding-right: 5%;
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.tile-furniture-1 .tile__content {
+	padding-right: 8%;
 }
 
 .tile-furniture-2 {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
+}
+
+.tile-furniture-2 .tile__content {
+	padding-left: 21%;
+	padding-right: 21%;
+}
+
+.tile-furniture-4 {
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 }
 
 .tile-furniture-4 .tile__content {
@@ -557,8 +575,13 @@ a:hover {
 	        align-items: center;
 	padding-left: 21%;
   padding-right: 21%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.tile-furniture-5 {
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 }
 
 /* depends on tiles/tiles.pcss */
@@ -576,6 +599,8 @@ a:hover {
 
 .tile-facades-2 {
 	font-size: 0;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 }
 
 .tile-facades-3 {
@@ -592,7 +617,6 @@ a:hover {
 }
 
 .tile-facades-4 {
-	overflow: hidden;
 	font-size: 0;
 	-ms-flex-negative: 0;
 	    flex-shrink: 0;
@@ -613,12 +637,12 @@ a:hover {
       justify-content: space-around;
 	padding-left: 21%;
 	padding-right: 21%;
-	padding-top: 10%;
-	padding-bottom: 10%;
+	padding-top: 15%;
+	padding-bottom: 15%;
 }
 
 .tile-facades-6 {
-	overflow: hidden;
+	/* overflow: hidden; */
 	font-size: 0;
 	-ms-flex-negative: 0;
 	    flex-shrink: 0;
@@ -822,10 +846,6 @@ a:hover {
 	.tile__content .button {
 		margin-top: 40px;
 	}
-	/* .tile img {
-		height: auto;
-		width: 100%;
-	} */
 	.tile-doors-1 {
 		padding-top: 100px;
 		padding-bottom: 100px;
@@ -833,20 +853,20 @@ a:hover {
 	.tile-doors-2 {
 		display: none;
 	}
+	.tile-doors-3 .tile__content {
+		padding-left: 10% !important;
+		padding-right: 10% !important;
+	}
 	.tile-doors-5 .tile__content {
-		padding-top: 15%;
-		padding-bottom: 15%;
-		padding-left: 15%;
-		padding-right: 15%;
+		padding-left: 10% !important;
+		padding-right: 10% !important;
 	}
 	.tile-furniture-2 {
 		display: none;
 	}
 	.tile-furniture-4 .tile__content {
-		padding-top: 15%;
-		padding-bottom: 15%;
-		padding-left: 15%;
-		padding-right: 15%;
+		padding-right: 10% !important;
+		padding-left: 10% !important;
 	}
 	.tile-facades-1 {
 		padding-top: 100px;
@@ -856,8 +876,6 @@ a:hover {
 		display: none;
 	}
 	.tile-facades-5 .tile__content {
-		padding-top: 15%;
-		padding-bottom: 15%;
 		padding-left: 15%;
 		padding-right: 15%;
 	}
@@ -897,9 +915,6 @@ a:hover {
 		display: block;
 		margin-top: 15px;
 		font-size: 24px;
-	}
-	.tile {
-		/* min-height: 100vh; */
 	}
 	.navigation-link {
 		display: none;
@@ -945,24 +960,40 @@ a:hover {
 }
 
 @media screen and (max-width: 1023px) {
-	.tile img {
-		width: 100%;
-		/* height: auto; */
-	}
 	.tile-doors-3 {
 		display: none;
 	}
 	.tile-doors-6 {
 		display: none;
 	}
+	.tile-doors-3 .tile__content {
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+	.tile-doors-5 .tile__content {
+		padding-left: 15%;
+		padding-right: 15%;
+	}
 	.tile-furniture-5 {
 		display: none;
+	}
+	.tile-furniture-4 .tile__content {
+		padding-right: 15%;
+		padding-left: 15%;
+	}
+	.tile-furniture-2 .tile__content {
+		padding-right: 15%;
+		padding-left: 15%;
 	}
 	.tile-facades-3 {
 		display: none;
 	}
 	.tile-facades-6 {
 		display: none;
+	}
+	.tile-facades-5 .tile__content {
+		padding-left: 15%;
+		padding-right: 15%;
 	}
   .tile-contacts {
     padding-top: 50px;
@@ -1022,13 +1053,26 @@ a:hover {
 
 @media screen and (min-width: 1280px) {
 	.tile-doors-3 .tile__content {
-		padding-left: 104px;
+		padding-left: 13.5%;
 		padding-right: 20px;
-		width: 459px;
+		max-width: 459px;
 	}
 	.tile-facades-3 .tile__content {
 		padding-left: 104px;
 		padding-right: 20px;
 		width: 459px;
 	}
+}
+
+@media screen and (max-width: 960px) {
+	.tile-doors-5 .tile__content {
+
+	}
+}
+
+@media screen and (max-width: 1366px) {
+  .tile-contacts {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }

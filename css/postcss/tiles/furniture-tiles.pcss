@@ -1,13 +1,24 @@
 .tile-furniture-1 {
 	align-items: center;
 	justify-content: flex-end;
-	padding-right: 5%;
   padding-top: 100px;
   padding-bottom: 100px;
 }
+.tile-furniture-1 .tile__content {
+	padding-right: 8%;
+}
 .tile-furniture-2 {
 	align-items: center;
+	flex-shrink: 0;
 }
+.tile-furniture-2 .tile__content {
+	padding-left: 21%;
+	padding-right: 21%;
+}
+.tile-furniture-4 {
+	flex-shrink: 0;
+}
+
 .tile-furniture-4 .tile__content {
 	display: flex;
 	flex-direction: column;
@@ -15,13 +26,24 @@
 	align-items: center;
 	padding-left: 21%;
   padding-right: 21%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+.tile-furniture-5 {
+	flex-shrink: 0;
 }
 
 @media screen and (max-width: 1023px) {
 	.tile-furniture-5 {
 		display: none;
+	}
+	.tile-furniture-4 .tile__content {
+		padding-right: 15%;
+		padding-left: 15%;
+	}
+	.tile-furniture-2 .tile__content {
+		padding-right: 15%;
+		padding-left: 15%;
 	}
 }
 @media screen and (max-width: 640px) {
@@ -29,9 +51,7 @@
 		display: none;
 	}
 	.tile-furniture-4 .tile__content {
-		padding-top: 15%;
-		padding-bottom: 15%;
-		padding-left: 15%;
-		padding-right: 15%;
+		padding-right: 10% !important;
+		padding-left: 10% !important;
 	}
 }
