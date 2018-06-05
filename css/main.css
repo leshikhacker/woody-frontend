@@ -1060,7 +1060,7 @@ a:hover {
 	.tile-facades-3 .tile__content {
 		padding-left: 104px;
 		padding-right: 20px;
-		width: 459px;
+		max-width: 459px;
 	}
 }
 
