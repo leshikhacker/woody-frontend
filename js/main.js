@@ -39,11 +39,8 @@ $(document).ready(function() {
   });
 
   $(window).resize(function() {
-    var width = $(this).width();
-    if(width > 640) {
-      $(sliders).each(function(){
-        this.reloadSlider();
-      });
-    }
+    $(sliders).each(function(){
+      this.reloadSlider();
+    });
   })
 });
