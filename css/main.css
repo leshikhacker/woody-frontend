@@ -505,8 +505,8 @@ a:hover {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 	padding-left: 21%;
 	padding-right: 21%;
 	padding-top: 15%;
@@ -1056,12 +1056,6 @@ a:hover {
 		padding-left: 104px;
 		padding-right: 20px;
 		max-width: 459px;
-	}
-}
-
-@media screen and (max-width: 960px) {
-	.tile-doors-5 .tile__content {
-
 	}
 }
 
