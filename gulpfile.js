@@ -1,54 +1,100 @@
-const gulp = require('gulp');
-const browserSync = require('browser-sync').create();
-const imagemin = require('gulp-imagemin');
-// const svgSprite = require("gulp-svg-sprites");
+const gulp = require("gulp");
+const browsersync = require("browser-sync").create();
+const imagemin = require("gulp-imagemin");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const rename = require('gulp-rename');
+const precss = require('precss');
+const mqpacker = require('css-mqpacker');
+const postcssImport  = require("postcss-import");
 
-var rename = require('gulp-rename');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var precss = require('precss');
-var mqpacker = require('css-mqpacker');
-var postcssImport  = require("postcss-import");
+let imagesSrc = './fixtures/images/*';
+let imagesDest = './images';
 
-gulp.task('serve', ['css', 'image'], function() {
-
-  browserSync.init({
-    server: {
-      baseDir: "./"
-    }
+// BrowserSync
+function browserSync(done) {
+  browsersync.init({
+      server: {
+          baseDir: "./"
+      },
+      port: 3000
   });
+  done();
+}
 
-  gulp.watch("./css/postcss/*.pcss", ['css']);
-  gulp.watch("./css/postcss/**/*.pcss", ['css']);
-  gulp.watch("./js/*.js").on('change', browserSync.reload);
-  gulp.watch("./*.html").on('change', browserSync.reload);
-});
 
-gulp.task('css', function () {
-  return gulp.src('./css/postcss/main.pcss')
+// Optimize Images
+function images() {
+  return gulp
+    .src(imagesSrc)
+    .pipe(newer(imagesDest))
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.jpegtran({ progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
+          plugins: [
+            {
+              removeViewBox: false,
+              collapseGroups: true
+            }
+          ]
+        })
+      ])
+    )
+    .pipe(gulp.dest(imagesDest));
+}
+
+// CSS task
+function css() {
+  return gulp
+    .src("./css/postcss/main.pcss")
     .pipe(postcss([
       postcssImport(),
       precss,
-      autoprefixer({browsers: ['last 2 versions']}),
+      autoprefixer,
       mqpacker
     ]))
     .pipe(rename({
       extname: ".css"
     }))
-    .pipe(gulp.dest('./css'))
-    .pipe(browserSync.stream());
-});
+    .pipe(gulp.dest("./css"))
+    .pipe(browsersync.stream());
+}
 
-gulp.task('image', function () {
-  gulp.src('./fixtures/images/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest('./images'));
-});
+// HTML task
+function html() {
+  return gulp
+      .src("./*.html")
+      .pipe(browsersync.stream());
+}
 
+// JS task
+function js() {
+  return gulp
+    .src("./js/*.js")
+    .pipe(browsersync.stream());
+}
+
+// Watch files
+function watchFiles() {
+  gulp.watch("./*.html", html);
+  gulp.watch("./css/postcss/*.pcss", css);
+  gulp.watch("./css/postcss/**/*.pcss", css);
+  gulp.watch("./js/*.js", js);
+
+  gulp.watch(imagesSrc, images);
+}
+
+const serve = gulp.parallel(watchFiles, browserSync);
+
+exports.default = serve;
+
+
+// const svgSprite = require("gulp-svg-sprites");
 // gulp.task('sprites', function () {
 //   return gulp.src('fixtures/svg/*.svg')
 //     .pipe(svgSprite())
 //     .pipe(gulp.dest("images"));
 // });
-
-gulp.task('default', ['serve']);
